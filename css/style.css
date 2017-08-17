@@ -239,7 +239,7 @@ button.button {
 .red-button,
 a.red-button,
 button.red-button {
-  background-color: #b03135;
+  background-color: #ec1e24;
   color: #fff;
 }
 
@@ -348,11 +348,158 @@ img { width: 100%; }
 
 /* Primary Navigation */
 
-/*.nav-height { margin-top: 4rem; }
+.nav-height { margin-top: 7.5rem; }
+
+.nav-main {
+  background-color: #373935;
+  height: 7.5rem;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+@media only screen and (min-width: 40em) {
+
+  .nav-height { margin-top: 4.375rem; }
+
+  .nav-main { height: 4.375rem; }
+
+}
 
 @media only screen and (min-width: 64em) {
-  .nav-height { margin-top: 5.625rem; }
-}*/
+
+
+
+}
+
+/* Nav Logo */
+
+h1.nav-logo {
+  font-size: 100%;
+  margin-bottom: 0;
+  margin-left: 1.6rem;
+  position: absolute;
+  top: 1.2rem;
+  transition: margin-left 0.3s, top 0.3s;
+  z-index: 1001;
+}
+
+h1.nav-logo a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+h1.nav-logo a:hover { text-decoration: none; }
+
+h1.nav-logo img {
+  height: 2.8rem;
+  width: 11.5rem;
+}
+
+@media only screen and (min-width: 40em) {
+
+  h1.nav-logo {
+    margin-left: 1.8rem;
+    top: 0.58rem;
+  }
+
+  h1.nav-logo img {
+    height: auto;
+    width: 13.1rem;
+  }
+
+}
+
+.nav-main nav { display: none; }
+
+/* Nav Menu Icon (Hamburger) */
+
+.nav-icon {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  display: inline-block;
+  height: 4.5rem;
+  left: auto;
+  opacity: 1;
+  outline: 0;
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
+  position: absolute;
+  top: 0.2rem;
+  right: 0.7rem;
+  transition: opacity 0.3s, left 0s 0.3s, right 0s 0.3s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  z-index: 1001;
+}
+
+.nav-icon > div {
+  background-color: #fff;
+  height: 3px;
+  position: relative;
+  transition: 0.3s;
+  width: 24px;
+}
+
+.nav-icon > div:before,
+.nav-icon > div:after {
+  background-color: #fff;
+  content: '';
+  display: block;
+  height: 3px;
+  transition: 0.3s;
+  position: absolute;
+  width: 24px;
+  z-index: -1;
+}
+
+.nav-icon > div:before { top: 0.5em; }
+.nav-icon > div:after { top: -0.5em; }
+
+/* Nav open 'x' revealed */
+
+.nav-open .nav-icon > div { background-color: transparent; }
+
+.nav-open .nav-icon > div:before,
+.nav-open .nav-icon > div:after {
+  background-color: #fff;
+  transition: 0.3s;
+}
+
+.nav-open .nav-icon > div:before {
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.nav-open .nav-icon > div:after {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.nav-open:not(.steps) .nav-icon > div:before,
+.nav-open:not(.steps) .nav-icon > div:after {
+  top: 0 !important;
+}
+
+@media only screen and (min-width: 64em) {
+
+  .nav-icon { display: none; }
+
+  .nav-open .nav-icon {
+    left: auto;
+    opacity: 1;
+    right: -2.6rem;
+    transition: opacity 0.3s, left 0s 0.3s, right 0s 0.3s;
+  }
+
+}
 
 /* Pagination */
 
