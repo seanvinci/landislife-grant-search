@@ -1,11 +1,5 @@
 /**** UTILITIES ****/
 
-/* Background Colors */
-
-.darkgray-bg { background-color: #373935 !important; }
-.red-bg { background-color: #b03135 !important; }
-.purple-bg { background-color: #5a65bd !important; }
-
 /* Positioning */
 
 .left { float: left !important; }
@@ -17,6 +11,22 @@
 .tal { text-align: left !important; }
 .tar { text-align: right !important; }
 
+.offscreen {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+}
+
+/* Margin & Padding */
+
+.nomar { margin: 0 !important; }
+.nopad { padding: 0 !important; }
+
 ul.inline-list {
   list-style: none;
   margin: 0;
@@ -24,6 +34,36 @@ ul.inline-list {
 }
 
 ul.inline-list li { display: inline-block; }
+
+/* Background Colors */
+
+.red-bg { background-color: #b03135 !important; }
+.purple-bg { background-color: #5a65bd !important; }
+.darkgray-bg { background-color: #373935 !important; }
+
+.red-bg h1,
+.red-bg h2,
+.red-bg h3,
+.red-bg h4,
+.red-bg p,
+.red-bg a,
+.red-bg li,
+.purple-bg h1,
+.purple-bg h2,
+.purple-bg h3,
+.purple-bg h4,
+.purple-bg p,
+.purple-bg a,
+.purple-bg li,
+.darkgray-bg h1,
+.darkgray-bg h2,
+.darkgray-bg h3,
+.darkgray-bg h4,
+.darkgray-bg p,
+.darkgray-bg a,
+.darkgray-bg li {
+  color: #fff;
+}
 
 /* Background Images */
 
@@ -40,6 +80,22 @@ ul.inline-list li { display: inline-block; }
   right: 0;
 }
 
+/* Show & Hide */
+
+.small-hide { display: none !important; }
+.small-show { display: block !important; }
+
+@media only screen and (min-width: 48em) {
+  .medium-hide { display: none !important; }
+  .medium-show { display: block !important; }
+}
+
+@media only screen and (min-width: 64em) {
+  .large-hide { display: none !important; }
+  .large-show { display: block !important; }
+}
+
+
 /**** GLOBAL ****/
 
 body {
@@ -50,18 +106,11 @@ body {
 
 body.clip { overflow: hidden !important; }
 
-/*.nav-height { margin-top: 4rem; }
-
-@media only screen and (min-width: 64em) {
-  .nav-height { margin-top: 5.625rem; }
-}*/
-
-
-/* Headings & Paragraphs */
+/* Typography */
 
 h1 {
   font-family: 'Helvetica', Arial, sans-serif;
-  font-size: 1.8125rem;
+  font-size: 1.25rem;
   font-weight: 600;
   letter-spacing: 0.3rem;
   line-height: 1.3;
@@ -81,21 +130,27 @@ h2 {
 
 h3 {
   font-family: 'Helvetica', Arial, sans-serif;
-  font-size: 1.125rem;
+  font-size: 0.875rem;
   font-weight: 300;
-  letter-spacing: 0.25rem;
+  line-height: 1.2;
+  letter-spacing: 0.2rem;
+  margin-bottom: 0.5rem;
   text-transform: uppercase;
 }
 
 h4 {
-  font-family: 'Helvetica', Arial, sans-serif;
-  font-size: 1rem;
+  font-family: Georgia, Times, 'Times New Roman', serif;
+  font-size: 0.875rem;
   font-weight: 600;
-  margin-bottom: 0.5rem;
+  line-height: 1.2;
+  margin-bottom: 0.7rem;
 }
 
 p {
-  font-size: 1rem;
+  font-family: Georgia, Times, 'Times New Roman', serif;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.4;
 }
 
 .subheader,
@@ -104,39 +159,29 @@ p.subheader,
   font-family: Georgia, Times, 'Times New Roman', serif;
   font-size: 0.875rem;
   font-weight: 300;
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
-
-@media only screen and (min-width: 48em) {
-
-
-
-}
-
-
-@media only screen and (min-width: 64em) {
+@media only screen and (min-width: 40em) {
 
   h1 {
     font-size: 2.875rem;
     letter-spacing: 0.4rem;
-    margin-bottom: 0.4rem;
   }
 
   h2 {
     font-size: 1.4375rem;
     letter-spacing: 0.25rem;
-    margin-bottom: 0.5rem;
   }
 
   h3 {
     font-size: 1.125rem;
     letter-spacing: 0.25rem;
+    margin-bottom: 0.5rem;
   }
 
   h4 {
     font-size: 1rem;
-    font-weight: 600;
     margin-bottom: 0.5rem;
   }
 
@@ -147,15 +192,21 @@ p.subheader,
   .subheader,
   p.subheader,
   .subheader p {
-    font-size: 1.25rem;
+    font-size: 1.3rem;
   }
 
 }
 
-
 /* Lists */
 
+ul,
+ol {}
 
+ul {}
+
+ol {}
+
+li {}
 
 /* Links & Buttons */
 
@@ -174,15 +225,15 @@ button.button {
   font-family: 'Helvetica', Arial, sans-serif;
   font-size: 0.8125rem;
   font-weight: 600;
-  height: 2.4rem;
+  min-height: 2.3rem;
   letter-spacing: 0.17rem;
-  line-height: 1;
+  line-height: 1.2;
   min-width: 6rem;
   padding: 0.7rem 1rem;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.2s, color 0.2s;
 }
 
 .red-button,
@@ -195,7 +246,7 @@ button.red-button {
 .red-button:hover,
 a.red-button:hover,
 button.red-button:hover {
-  background-color: #b03135;
+  background-color: #712b2a;
 }
 
 .purple-button,
@@ -208,7 +259,20 @@ button.purple-button {
 .purple-button:hover,
 a.purple-button:hover,
 button.purple-button:hover {
-  background-color: #b21e22;
+  background-color: #444c8e;
+}
+
+.gray-button,
+a.gray-button,
+button.gray-button {
+  background-color: #aaa;
+  color: #fff;
+}
+
+.gray-button:hover,
+a.gray-button:hover,
+button.gray-button:hover {
+  background-color: #777;
 }
 
 /* Forms */
@@ -233,22 +297,19 @@ fieldset {
   border-radius: 6px;
   margin-bottom: 0.9rem;
   position: relative;
-  transition: 0.3s;
+  transition: 0.2s;
 }
 
 .input-wrap.arrow:after {
-  border-color: transparent;
-  border-style: solid;
-  border-top-color: #d70016;
-  border-width: 12px 6px 0 6px;
-  content: "";
-  height: 0;
-  margin-top: -0.35rem;
+  color: #d70016;
+  content: '►';
+  font-size: 1rem;
+  margin-top: 0.05rem;
   pointer-events: none;
   position: absolute;
   right: 0.9rem;
+  transform: translateY(-50%) rotate(90deg);
   top: 50%;
-  width: 0;
 }
 
 .input-wrap input,
@@ -263,12 +324,12 @@ fieldset {
   display: block;
   outline: none;
   color: #4d4d4d;
-  font-family: 'nyt-franklin', 'Helvetica', Arial, sans-serif;
+  font-family: 'Helvetica', Arial, sans-serif;
   font-size: 1rem;
   font-weight: 400;
   line-height: normal;
   padding: 0.6rem 0.7rem;
-  transition: box-shadow 0.3s;
+  transition: box-shadow 0.2s;
   width: 100%;
 }
 
@@ -281,6 +342,82 @@ fieldset {
 /* Images */
 
 img { width: 100%; }
+
+
+/**** NAVIGATION ****/
+
+/* Primary Navigation */
+
+/*.nav-height { margin-top: 4rem; }
+
+@media only screen and (min-width: 64em) {
+  .nav-height { margin-top: 5.625rem; }
+}*/
+
+/* Pagination */
+
+.pagination {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+}
+
+.pagination ul {
+  display: inline-block;
+  border-left: 1px solid #979797;
+}
+
+.pagination ul li {
+  border-right: 1px solid #979797;
+  display: inline-table;
+  height: 2.6rem;
+  float: left;
+  width: 2.5rem;
+  border-bottom: 1px solid #979797;
+  border-top: 1px solid #979797;
+}
+
+.pagination ul li a {
+  color: #212121;
+  display: table-cell;
+  font-family: 'Helvetica', Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  height: 100%;
+  letter-spacing: 0.1rem;
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: color 0.2s;
+  vertical-align: middle;
+  width: 100%;
+  padding-top: 0.1rem;
+}
+
+.pagination ul li a:hover,
+.pagination ul li.pag-active a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.pagination ul li a:after {
+  background-color: transparent;
+  bottom: 0.3rem;
+  content: '';
+  left: 0.3rem;
+  position: absolute;
+  right: 0.3rem;
+  transition: background-color 0.2s;
+  top: 0.3rem;
+  z-index: -1;
+}
+
+.pagination ul li:hover a:after,
+.pagination ul li.pag-active a:after {
+  background-color: #212121;
+}
 
 
 /**** MASTHEAD ****/
@@ -299,42 +436,120 @@ img { width: 100%; }
 }
 
 .masthead-inner {
-  color: #fff;
   text-align: center;
   z-index: 1;
 }
 
-@media only screen and (min-width: 64em) {
+.masthead-inner h1,
+.masthead-inner h2,
+.masthead-inner p {
+  color: #fff;
+}
+
+.masthead-inner p {
+  -webkit-font-smoothing: antialiased;
+}
+
+@media only screen and (min-width: 40em) {
 
   .masthead { min-height: 30rem; }
 
   .masthead-inner {
-    bottom: 4.5rem;
+    bottom: 2rem;
     left: 0;
     position: absolute;
     right: 0;
   }
+
+  .masthead-inner h2 { margin-bottom: 3.5rem; }
+
+}
+
+@media only screen and (min-width: 64em) {
+
+  .masthead-inner { bottom: 4rem; }
 
 }
 
 
 /**** BLOCK SPACING ****/
 
-.content-block {
-  padding-bottom: 2.8rem;
-  padding-top: 2.8rem;
-}
+.content-block-bottom { padding-bottom: 3rem; }
+.content-block-top { padding-top: 3rem; }
 
 
 /**** GRANT COUNTER ****/
 
-.grant-counter {
-  text-align: center;
+.grant-counter { text-align: center; }
+
+.grant-counter.content-block-bottom { padding-bottom: 2rem; }
+.grant-counter.content-block-top { padding-top: 2rem; }
+
+.grant-counter ul {
+  display: inline-block;
+  list-style: none;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0.5rem;
+  max-width: 22rem;
+  width: 100%;
 }
 
-.grant-counter.content-block {
-  padding-bottom: 1.5rem;
-  padding-top: 1.5rem;
+.grant-counter li {
+  float: left;
+  min-width: 5rem;
+  width: 33.33333%;
+}
+
+.grant-counter li > div {
+  margin: 0 auto;
+  width: 5rem;
+}
+
+.grant-label {
+  border-bottom: 1px solid #fff;
+  font-family: Georgia, Times, 'Times New Roman', serif;
+  font-size: 0.875rem;
+  letter-spacing: 0.03rem;
+  line-height: 1.2;
+  margin-bottom: 0.35rem;
+  padding-bottom: 0.35rem;
+}
+
+.grant-number {
+  font-family: 'Helvetica', Arial, sans-serif;
+  font-size: 1.75rem;
+  font-weight: 600;
+  letter-spacing: 0.25rem;
+}
+
+@media only screen and (max-width: 19.9375rem) {
+
+  .grant-counter li { float: none; }
+
+}
+
+@media only screen and (min-width: 40em) {
+
+  .grant-counter ul {
+    margin-top: 1.5rem;
+    max-width: 40rem;
+  }
+
+  .grant-counter li > div { width: 7.3rem; }
+
+  .grant-label {
+    font-size: 1.25rem;
+    letter-spacing: 0.03rem;
+    margin-bottom: 0.6rem;
+    padding-bottom: 0.6rem;
+  }
+
+  .grant-number {
+    font-size: 2.625rem;
+    letter-spacing: 0.5rem;
+  }
+
 }
 
 
@@ -342,29 +557,41 @@ img { width: 100%; }
 
 /* Grant Search */
 
-.grant-search {
-  
-}
-
 .grant-search h2 { text-align: center; }
 
 /* Grant Filter */
 
 .grant-filter {
+  display: inline-block;
   margin-bottom: 2.8rem;
+  margin-top: 2rem;
+  width: 100%;
 }
 
 .grant-filter fieldset { text-align: left; }
 
-/* Grand Results */
-
-.grant-results h3 {
-  display: inline-block;
-  /*border-top: solid 1px #3c3d3b;*/
-  /*padding-top: 2rem;*/
+.grant-filter button[type='submit'] {
+  margin-top: 1.7rem;
+  width: 100%;
 }
 
-.grant-results-content { margin-top: 3rem; }
+@media only screen and (min-width: 40em) {
+
+  .grant-filter button[type='submit'] { margin-top: 0.9rem; }
+
+}
+
+@media only screen and (min-width: 64em) {
+
+  .grant-filter button[type='submit'] { margin-top: 1.9rem; }
+
+}
+
+/* Grand Results */
+
+.grant-results h3 { text-align: center; }
+
+.grant-results-content { margin-top: 2rem; }
 
 .grant-results-content ul {
   list-style: none;
@@ -372,25 +599,84 @@ img { width: 100%; }
   padding: 0;
 }
 
-.grant-results-content ul li {
-  
-}
-
 .grant-results-content figure {
   background-color: #f1f1f1;
-  margin-bottom: 2rem;
+  margin-bottom: 1.3rem;
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
   padding: 1rem;
 }
 
-.grant-results-content figure img { margin-bottom: 0.5rem; }
+.grant-results-content figure img {
+  border: 1px solid #979797;
+  margin-bottom: 0.5rem;
+}
 
-.grant-results-content figcaption {}
+@media only screen and (min-width: 40em) {
+
+  .grant-results h3 {
+    height: 2.5625rem;
+    margin-bottom: 0;
+    position: relative;
+    text-align: left;
+  }
+
+  .grant-results h3 span {
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .grant-results-content { margin-top: 3rem; }
+
+  .grant-results-content figure { margin-bottom: 2rem; }
+
+}
 
 
 /* Foundations Feature Block */
 
 .foundations-feature-block { text-align: center; }
+
+.foundations-feature-block h4 {
+  -webkit-font-smoothing: antialiased;
+  margin-bottom: 1.3rem;
+}
+
+.foundations-feature-block ul li {
+  display: block;
+  margin-right: 1rem;
+}
+
+.foundations-feature-block a {
+  border-bottom-color: transparent;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  font-size: 0.875rem;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 300;
+  line-height: 1.6;
+  text-decoration: none;
+  transition: border-bottom 0.2s;
+}
+
+.foundations-feature-block a:hover {
+  border-bottom-color: #fff;
+  text-decoration: none;
+}
+
+@media only screen and (min-width: 40em) {
+
+  .foundations-feature-block ul li { display: inline-block; }
+
+  .foundations-feature-block a {
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+
+}
+
 
