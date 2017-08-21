@@ -346,42 +346,14 @@ img { width: 100%; }
 
 /**** NAVIGATION ****/
 
-/* Primary Navigation */
-
-.nav-height { margin-top: 7.5rem; }
-
-.nav-main {
-  background-color: #373935;
-  height: 7.5rem;
-  left: 0;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-}
-
-@media only screen and (min-width: 40em) {
-
-  .nav-height { margin-top: 4.375rem; }
-
-  .nav-main { height: 4.375rem; }
-
-}
-
-@media only screen and (min-width: 64em) {
-
-
-
-}
-
 /* Nav Logo */
 
 h1.nav-logo {
   font-size: 100%;
   margin-bottom: 0;
-  margin-left: 1.6rem;
+  margin-left: 1.4rem;
   position: absolute;
-  top: 1.2rem;
+  top: 0.75rem;
   transition: margin-left 0.3s, top 0.3s;
   z-index: 1001;
 }
@@ -412,7 +384,264 @@ h1.nav-logo img {
 
 }
 
-.nav-main nav { display: none; }
+
+.nav-height { margin-top: 4rem; }
+
+@media only screen and (min-width: 40em) {
+
+  .nav-height { margin-top: 4rem; }
+
+}
+
+.nav-main {
+  height: 4rem;
+  left: 0;
+  position: fixed;
+  top: 0;
+  transition: opacity 0.3s;
+  width: 100%;
+  z-index: 1000;
+}
+
+.nav-main:after {
+  background-color: #373935;
+  bottom: 0;
+  content: '';
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-main nav {
+  border-top: 1px solid #555;
+  left: -9999px;
+  max-height: calc(100vh - 4rem);
+  opacity: 0;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: scroll;
+  position: absolute;
+  top: 4rem;
+  transition: opacity 0.3s;
+  visibility: hidden;
+  width: 100%;
+  z-index: 999;
+}
+
+.nav-open .nav-main nav {
+  left: auto;
+  opacity: 1;
+  visibility: visible;
+}
+
+.nav-main nav ul {
+  list-style: none;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-left: 0;
+}
+
+.nav-main nav ul li { margin-bottom: 0; }
+
+.nav-main nav ul li a {
+  color: #fff;
+  display: block;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 1rem 1.2rem;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: arial;
+  letter-spacing: 0.1rem;
+}
+
+.nav-main nav ul li.strong > a { font-weight: 600; }
+.nav-main nav ul li.red > a { color: #BE0617; }
+
+.nav-main nav ul li.has-subnav > a:after {
+  color: #fff;
+  content: '+';
+  font-size: 1rem;
+  position: absolute;
+  right: 1.2rem;
+  top: 50%;
+  transform: translateY(-50%) rotate(-90deg);
+  transition: transform 0.3s;
+}
+
+.nav-main nav ul li.has-subnav.nav-active > a:after { transform: rotate(0); }
+.nav-main nav > ul ul { display: none; }
+
+.nav-main nav ul.level-1 > li a {
+  background-color: #373935;
+  border-bottom-color: #555;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+}
+
+.nav-main nav ul.level-1 > li.nav-active a { border-bottom-color: #4f4f4f; }
+
+.nav-main nav ul.level-2 > li a {
+  background-color: #2f2f2f;
+  border-bottom-color: #4f4f4f;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  font-weight: 400;
+  letter-spacing: normal;
+  text-transform: unset;
+}
+
+/*.nav-main nav ul.level-2 > li.nav-active a { border-bottom-color: #afafaf; }*/
+
+.nav-overlay {
+  background: rgba(0, 0, 0, 0.6);
+  bottom: 0;
+  content: '';
+  height: 100vh;
+  left: -9999px;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  visibility: hidden;
+  width: 100%;
+  z-index: 998;
+}
+
+.nav-open .nav-overlay {
+  left: 0;
+  opacity: 1;
+  transition: opacity 0.3s;
+  visibility: visible;
+}
+
+@media screen and (min-width: 48em) {
+
+  .nav-main nav {
+    border-left: 1px solid #555;
+    opacity: 0;
+    top: 4rem;
+    transition: opacity 0.3s, right 0.3s;
+    right: -20rem;
+    width: 20rem;
+    z-index: 1001;
+  }
+
+  .nav-open .nav-main nav {
+    left: auto;
+    right: 0;
+    opacity: 1;
+  }
+
+}
+
+@media screen and (min-width: 64em) {
+
+  .nav-main {
+    height: 5.625rem;
+    transition-property: height;
+    transition-duration: 0.4s;
+  }
+
+  .nav-small .nav-main { height: 4rem; }
+
+  .nav-main > div {
+    height: 100%;
+    width: 100%;
+  }
+
+  .nav-main nav {
+    border-left: 0;
+    float: right;
+    height: 100%;
+    left: auto;
+    margin-right: 1rem;
+    opacity: 1;
+    overflow: visible;
+    position: relative;
+    right: auto;
+    top: 0;
+    visibility: visible;
+    width: auto;
+  }
+
+  .nav-main nav > ul {
+    display: inline-block;
+    height: 100%;
+  }
+
+  .nav-main nav > ul > li {
+    display: inline-table;
+    height: 100%;
+    float: left;
+    position: relative;
+  }
+
+  .nav-main nav ul.level-1 > li > a {
+    background-color: transparent;
+    border-bottom: 0;
+    display: table-cell;
+    padding-left: 1.1rem;
+    padding-right: 1.1rem;
+    transition: background-color 0.3s;
+    vertical-align: middle;
+  }
+
+  .nav-main nav ul.level-1 > li > a:after { content: none; }
+  .nav-main nav ul.level-1 > li:hover > a { background-color: #eaeaea; }
+  .nav-main nav ul.level-2 > li > a { background-color: #eaeaea; }
+  .nav-main nav ul.level-2 > li:hover > a { background-color: #dfdfdf; }
+  .nav-main nav ul.level-3 > li > a { background-color: #dfdfdf; }
+  .nav-main nav ul.level-3 > li:hover > a { background-color: #cfcfcf; }
+
+  .nav-main nav ul li > ul {
+    display: inline-block;
+    left: -9999px;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    transition: opacity 0.3s;
+    visibility: hidden;
+    width: 14rem;
+  }
+
+  .nav-main nav ul li:hover > ul {
+    opacity: 1;
+    left: 14rem;
+    top: 0;
+    visibility: visible;
+  }
+
+  .nav-main nav ul.level-1 > li > ul { top: 5.625rem; }
+  .nav-small .nav-main nav ul.level-1 > li > ul { top: 4rem; }
+  .nav-main nav ul.level-1 > li:hover > ul { left: 0; }
+
+  .nav-main nav ul.level-1 > li.left-subnav ul {
+    left: auto;
+    right: 14rem;
+  }
+
+  .nav-main nav ul.level-1 > li.left-subnav > ul {
+    left: auto;
+    right: 0;
+  }
+
+  .nav-overlay { display: none; }
+
+}
+
+@media screen and (min-width: 75em) {
+  .nav-main > div {
+    height: 100%;
+    margin: 0 auto;
+    max-width: 87.5rem;
+    padding-left: 1.8rem;
+    padding-right: 1.8rem;
+    width: 100%;
+  }
+}
 
 /* Nav Menu Icon (Hamburger) */
 
@@ -421,15 +650,15 @@ h1.nav-logo img {
   border: 0;
   cursor: pointer;
   display: inline-block;
-  height: 4.5rem;
+  height: 100%;
   left: auto;
   opacity: 1;
   outline: 0;
   padding-left: 1.2rem;
   padding-right: 1.2rem;
   position: absolute;
-  top: 0.2rem;
-  right: 0.7rem;
+  top: 0;
+  right: 0;
   transition: opacity 0.3s, left 0s 0.3s, right 0s 0.3s;
   -webkit-user-select: none;
   -moz-user-select: none;
