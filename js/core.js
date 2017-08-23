@@ -35,22 +35,6 @@ function resetNav() {
   $hasSubnavUl.css('display', '');
 }
 
-// Check if user has scrolled more than 200px
-// If so add class of 'nav-small' to body tag
-function smallNav() {
-  var scroll_top = $window.scrollTop();
-  var viewport_width = $window.outerWidth(true);
-  if (viewport_width > 768) {
-    if (scroll_top > 130) {
-      $body.addClass('nav-small');
-    } else {
-      $body.removeClass('nav-small');
-    }
-  } else {
-    $body.removeClass('nav-small');
-  }
-}
-
 
 $(document).ready(function() {
 
