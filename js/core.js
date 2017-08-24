@@ -66,4 +66,27 @@ $(document).ready(function() {
     }
   });
 
+  // Check if nav and subnav item will be out of viewport
+  // if it is add class to change position
+  $(".nav-main nav li").on('mouseenter mouseleave', function(e) {
+    if ($(window).outerWidth(true) >= 1024) {
+      if ($('ul.level-2', this).length) {
+        var parentElm = $('ul.level-2', this);
+        // var childElm = $('ul.level-3', this);
+        var off = parentElm.offset();
+        var l = off.left;
+        var w = parentElm.width();
+        var docW = $('.nav-main').width();
+
+        var isEntirelyVisible = (l + w <= docW);
+
+        if (!isEntirelyVisible) {
+          $(this).addClass('left-subnav');
+        } else {
+          $(this).removeClass('left-subnav');
+        }
+      }
+    }
+  });
+
 });

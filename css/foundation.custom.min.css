@@ -30,7 +30,7 @@
 }
 
 @media print,
-screen and (min-width:40em) {
+screen and (min-width:48em) {
     .row .row {
         margin-right: -.9375rem;
         margin-left: -.9375rem
@@ -511,7 +511,7 @@ screen and (min-width:64em) {
 }
 
 @media print,
-screen and (min-width:40em) {
+screen and (min-width:48em) {
     .medium-1 {
         width: 8.33333%
     }
