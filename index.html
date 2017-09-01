@@ -6,9 +6,10 @@
   <title>Land is Life - Grants</title>
   <meta name="description" content="" />
   <!-- CSS  -->
-  <link rel="stylesheet" href="css/normalize.custom.min.css">
-  <link rel="stylesheet" href="css/foundation.custom.min.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link href="css/normalize.custom.min.css" rel="stylesheet">
+  <link href="css/foundation.custom.min.css" rel="stylesheet">
+  <link href="css/chosen.min.css" rel="stylesheet" />
+  <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
 
@@ -51,45 +52,42 @@
   </header>
   
   <section class="masthead nav-height" style="background-image: url('img/casestudy-1-61_1600x1067.jpg');">
-    <div class="masthead-inner row">
-      <div class="small-12 large-10 large-push-1 columns">
-        <h1>Our work in action</h1>
-        <h2>Indigenous-led grantmaking</h2>
-        <div class="subheader">
-          <p>We provide direct support to the most overlooked Indigenous communities, which allows our Regional Coordinators to deploy small, flexible funds to address ever-changing needs at the grassroots. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at erat massa. Maecenas vel purus lacus. Pellentesque tincidunt nunc eget felis varius venenatis.</p>
+    <div class="masthead-inner">
+      <div class="row">
+        <div class="small-12 large-10 large-push-1 columns">
+          <h1>Our work in action</h1>
+          <h2>Indigenous-led grantmaking</h2>
+          <div class="subheader">
+            <p>We provide direct support to the most overlooked Indigenous communities, which allows our Regional Coordinators to deploy small, flexible funds to address ever-changing needs at the grassroots. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at erat massa. Maecenas vel purus lacus. Pellentesque tincidunt nunc eget felis varius venenatis.</p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <section class="grant-counter content-block-top content-block-bottom red-bg">
-    <div class="row">
-      <div class="columns">
-        <h2>Grants to Date</h2>
-      </div>
-    </div>
-    <div class="row">
-      <div class="columns">
-        <ul class="inline-list">
-          <li>
-            <div>
-              <div class="grant-label">Grants</div>
-              <div class="grant-number">100</div>
-            </div>
-          </li>
-          <li>
-            <div>
-              <div class="grant-label">Countries</div>
-              <div class="grant-number">100</div>
-            </div>
-          </li>
-          <li>
-            <div>
-              <div class="grant-label">IP Groups</div>
-              <div class="grant-number">100</div>
-            </div>
-          </li>
-        </ul>
+      <div class="grant-counter row">
+        <div class="columns">
+          <h3>Grants to Date</h3>
+        </div>
+        <div class="columns">
+          <ul class="inline-list">
+            <li>
+              <div>
+                <div class="grant-label">Grants</div>
+                <div class="grant-number">40</div>
+              </div>
+            </li>
+            <li>
+              <div>
+                <div class="grant-label">Countries</div>
+                <div class="grant-number">30</div>
+              </div>
+            </li>
+            <li>
+              <div>
+                <div class="grant-label">IP Groups</div>
+                <div class="grant-number">50</div>
+              </div>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
@@ -106,7 +104,7 @@
               <label for="themes">
                 <div class="input-text">Themes</div>
                 <div class="input-wrap arrow">
-                  <select name="themes">
+                  <select name="themes" multiple="multiple">
                     <option value="None"></option>
                     <option value="Capacity Building">Capacity Building</option>
                     <option value="Climate & Conservation">Climate &amp; Conservation</option>
@@ -125,7 +123,7 @@
               <label for="region">
                 <div class="input-text">Region</div>
                 <div class="input-wrap arrow">
-                  <select name="region">
+                  <select name="region" multiple="multiple">
                     <option value="None"></option>
                     <option value="Latin America">Latin America</option>
                     <option value="South Asia">South Asia</option>
@@ -139,7 +137,7 @@
               <label for="year">
                 <div class="input-text">Year</div>
                 <div class="input-wrap arrow">
-                  <select name="year">
+                  <select name="year" multiple="multiple">
                     <option value="None"></option>
                     <option value="2017">2017</option>
                     <option value="2016">2016</option>
@@ -285,8 +283,9 @@
     </div>
   </footer>
 
-  <!-- Scripts -->
+  <!-- JS -->
   <script src="js/jquery-3.1.1.min.js"></script>
+  <script src="js/chosen.jquery.min.js"></script>
   <script src="js/core.js"></script>
 </body>
 </html>

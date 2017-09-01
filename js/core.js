@@ -36,6 +36,16 @@ function resetNav() {
 }
 
 
+// Initialize Select2 Plugin
+$('select').chosen({
+  disable_search: true,
+  single_backstroke_delete: true,
+  inherit_select_classes: true,
+  placeholder_text_multiple: ' ',
+  width: '100%'
+});
+
+
 $(document).ready(function() {
 
   // Header Navigation
@@ -87,6 +97,18 @@ $(document).ready(function() {
         }
       }
     }
+  });
+
+  $('.grant-number').each(function () {
+    $(this).prop('Counter',0).animate({
+      Counter: $(this).text()
+    }, {
+      duration: 1500,
+      easing: 'linear',
+      step: function (now) {
+        $(this).text(Math.ceil(now));
+      }
+    });
   });
 
 });

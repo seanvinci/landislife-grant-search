@@ -318,23 +318,24 @@ fieldset {
   pointer-events: none;
   position: absolute;
   right: 0.9rem;
-  transform: translateY(-50%) rotate(90deg);
-  top: 50%;
+  transform: rotate(90deg);
+  top: 0.75rem;
 }
 
 .input-wrap input,
 .input-wrap select,
-.input-wrap textarea {
+.input-wrap textarea,
+.input-wrap .chosen-container-multi .chosen-choices {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   background: transparent;
   border: 0;
   border-radius: 0.375rem;
-  display: block;
+  display: inline-block;
   outline: none;
   color: #4d4d4d;
-  font-family: Georgia, Times, 'Times New Roman', serif;
+  font-family: Arial, sans-serif;
   font-size: 1rem;
   font-weight: 400;
   line-height: normal;
@@ -345,9 +346,34 @@ fieldset {
 
 .input-wrap input:focus,
 .input-wrap select:focus,
-.input-wrap textarea:focus {
+.input-wrap textarea:focus,
+.input-wrap .chosen-container-active .chosen-choices {
   box-shadow: 0 0 0 1px #999;
 }
+
+/* Multiselect style overrides */
+
+.input-wrap .chosen-container-multi .chosen-choices {
+  padding: 0.35rem 2rem 0.35rem 0.4rem;
+}
+
+.input-wrap .chosen-container-multi .chosen-choices li.search-choice {
+  background-color: #fff;
+  border: none;
+  color: #333;
+  font-size: 0.8rem;
+  line-height: 1.2;
+  margin: 0 0.25rem 0 0;
+  padding: 0.35rem 1.375rem 0.35rem 0.375rem;
+}
+
+.input-wrap .chosen-container-multi .chosen-choices li.search-choice .search-choice-close {
+  right: 0.3rem;
+  top: 0.5rem;
+}
+
+.input-wrap .chosen-container-active .chosen-choices { border: none; }
+
 
 /* Images */
 
@@ -880,7 +906,6 @@ h1.nav-logo img {
   background-position: 50% 0;
   background-size: cover;
   height: auto;
-  /*min-height: calc(100vh - 3.55rem);*/
   min-height: 20rem;
   overflow: hidden;
   padding-bottom: 3rem;
@@ -916,15 +941,9 @@ h1.nav-logo img {
 
 @media only screen and (min-width: 48em) {
 
-  .masthead { min-height: 30rem; }
+  .masthead { min-height: 45rem; }
 
   .masthead-inner h2 { margin-bottom: 3.5rem; }
-
-}
-
-@media only screen and (min-width: 64em) {
-
-  .masthead-inner { bottom: 4rem; }
 
 }
 
@@ -937,7 +956,16 @@ h1.nav-logo img {
 
 /**** GRANT COUNTER ****/
 
-.grant-counter { text-align: center; }
+.grant-counter { margin-top: 3rem; }
+
+.grant-counter * {
+  color: #fff;
+  text-align: center;
+}
+
+.grant-counter h2 {
+  margin-bottom: 1rem;
+}
 
 .grant-counter.content-block-bottom { padding-bottom: 2rem; }
 .grant-counter.content-block-top { padding-top: 2rem; }
@@ -947,7 +975,7 @@ h1.nav-logo img {
   list-style: none;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 0.5rem;
+  margin-top: 1rem;
   max-width: 22rem;
   width: 100%;
 }
@@ -988,9 +1016,11 @@ h1.nav-logo img {
 
 @media only screen and (min-width: 48em) {
 
+  .grant-counter { margin-top: 4rem; }
+
   .grant-counter ul {
-    margin-top: 1rem;
-    max-width: 28rem;
+    margin-top: 1.5rem;
+    max-width: 25rem;
   }
 
   .grant-counter li > div { width: 5.8rem; }
