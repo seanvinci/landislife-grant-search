@@ -1,3 +1,5 @@
+(function($) {
+
 // GLOBAL VARIABLES
 
 var $window = $(window);
@@ -35,15 +37,36 @@ function resetNav() {
   $hasSubnavUl.css('display', '');
 }
 
+// Set equal heights to program boxes
+function equalHeight(container) {
+  var currentTallest = 0,
+      currentRowStart = 0,
+      rowDivs = new Array(),
+      $el,
+      topPosition = 0;
+  $(container).each(function() {
+    $el = $(this);
+    $($el).height('auto');
+    topPostion = $el.position().top;
+    if (currentRowStart != topPostion) {
+      for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
+        rowDivs[currentDiv].height(currentTallest);
+      }
+      rowDivs.length = 0;
+      currentRowStart = topPostion;
+      currentTallest = $el.height();
+      rowDivs.push($el);
+    } else {
+      rowDivs.push($el);
+      currentTallest = (currentTallest < $el.height()) ? ($el.height()) : (currentTallest);
+    } for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
+      rowDivs[currentDiv].height(currentTallest);
+    }
+  });
+}
 
-// Initialize Select2 Plugin
-$('select').chosen({
-  disable_search: true,
-  single_backstroke_delete: true,
-  inherit_select_classes: true,
-  placeholder_text_multiple: ' ',
-  width: '100%'
-});
+
+$body.removeClass('preload');
 
 
 $(document).ready(function() {
@@ -112,3 +135,5 @@ $(document).ready(function() {
   });
 
 });
+
+})(jQuery);
