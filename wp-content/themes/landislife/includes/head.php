@@ -7,6 +7,7 @@
 echo '<title>'.get_the_title().' | '.get_bloginfo('name').'</title>';
 echo '<meta name="description" content="" />';
 wp_head();
+echo '<link href="'.get_template_directory_uri().'/favicon.ico" rel="icon">';
 ?>
 </head>
 <body <?php body_class(); ?>>
