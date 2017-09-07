@@ -1,6 +1,6 @@
 <footer class="content-block-top content-block-bottom darkgray-bg">
   <div class="row">
-    <div class="footer-contact medium-3 columns">
+    <div class="footer-contact medium-4 columns">
       <ul>
         <li><img src="<?php echo get_template_directory_uri(); ?>/img/logos/land_is_life_logo_vertical_white.svg" style="width: 134px;" alt="Land is Life"></li>
         <li class="columns nopad">
@@ -23,8 +23,39 @@
         </li>
       </ul>
     </div>
-    <div class="footer-lead-capture medium-5 columns tac">
-      <img src="<?php echo get_template_directory_uri(); ?>/img/mailchimp_temp.jpg" style="width: 250px;" alt="">
+    <div class="footer-lead-capture medium-4 columns tac">
+      <div class="tal" id="mc_embed_signup">
+        <h2>Be Inspired</h2>
+        <p>Sign up to receive updates.</p>
+
+        <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
+        <div id="mc_embed_signup">
+          <form action="//landislife.us7.list-manage.com/subscribe/post?u=08290e3a846cae058a018ab6a&amp;id=60b724043f" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+            <div id="mc_embed_signup_scroll">
+              <div class="mc-field-group">
+                <label for="mce-EMAIL"><span class="offscreen">Email Address</span></label>
+                <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email Address">
+              </div>
+              <div class="mc-field-group">
+                <label for="mce-FNAME"><span class="offscreen">First Name</span></label>
+                <input type="text" value="" name="FNAME" class="" id="mce-FNAME" placeholder="Last Name">
+              </div>
+              <div class="mc-field-group">
+                <label for="mce-LNAME"><span class="offscreen">Last Name</span></label>
+                <input type="text" value="" name="LNAME" class="" id="mce-LNAME" placeholder="Last Name">
+              </div>
+              <div id="mce-responses" class="clear">
+                <div class="response" id="mce-error-response" style="display:none"></div>
+                <div class="response" id="mce-success-response" style="display:none"></div>
+              </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+              <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_08290e3a846cae058a018ab6a_60b724043f" tabindex="-1" value=""></div>
+              <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+            </div>
+          </form>
+        </div>
+        <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+        <p>We respect your privacy.</p>
+      </div>
     </div>
     <div class="footer-twitter medium-4 columns tar">
       <a class="twitter-timeline" data-width="278" data-height="400" data-link-color="#ec1e24" href="https://twitter.com/landislife"></a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></script>

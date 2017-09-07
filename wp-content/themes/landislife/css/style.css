@@ -1293,6 +1293,13 @@ footer ul li {
 
 .footer-contact a:hover { text-decoration: none; }
 
+.footer-lead-capture { max-width: 20rem; }
+
+/* MailChimp Overrides */
+
+div#mc_embed_signup form { padding: 0; }
+
+
 .footer-social { margin-top: 0.45rem; }
 
 .footer-social li {
@@ -1307,6 +1314,12 @@ footer ul li {
 .footer-credits,
 .footer-credits a {
   color: #84858A !important;
+}
+
+@media only screen and (min-width: 48em) {
+
+  .footer-twitter { float: right; }
+
 }
 
 .footer-legal {
