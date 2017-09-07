@@ -63,7 +63,7 @@
   </div>
   <div class="footer-legal row tac">
     <div class="columns">
-      <img src="<?php echo get_template_directory_uri(); ?>/img/logos/guidestar_platinum_280x206.png" style="width: 139px;" alt="Guidestar Platinum Participant">
+      <a href="http://www.guidestar.org/profile/22-3101280" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/logos/guidestar_platinum_280x206.png" style="width: 139px;" alt="Guidestar Platinum Participant"></a>
       <div>
         Land is Life is a registered 501(c)(3) tax-exempt organization.<br/>
         Federal Identification Number (EIN): 22-3101280<br/>
