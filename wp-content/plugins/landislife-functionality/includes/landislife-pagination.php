@@ -19,7 +19,6 @@ function lil_pagination($pages = '', $range = 2) {
 
   if (1 != $pages) {
     
-    echo '<div class="pagination">';
     echo '<ul class="inline-list">';
 
     if ($paged > 1 && $showitems < $pages) echo '<li><a href="'.get_pagenum_link($paged - 1).'"><span class="offscreen">Previous</span>◄</a></li>';
@@ -36,7 +35,6 @@ function lil_pagination($pages = '', $range = 2) {
 
     if ($paged < $pages && $showitems < $pages) echo '<li><a href="'.get_pagenum_link($paged + 1).'"><span class="offscreen">Next</span>&#9658;</a></li>';
 
-    echo '</div>';
     echo '</ul>';
 
   }

@@ -1,5 +1,5 @@
 <?php if (have_rows('foundations')): ?>
-<section class="foundations-feature-block content-block-top content-block-bottom purple-bg">
+<section class="foundations-feature-block content-block-top content-block-bottom red-bg">
   <div class="row">
     <div class="columns">
       <h4>Funding Foundations</h4>

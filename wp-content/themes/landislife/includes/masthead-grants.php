@@ -9,8 +9,8 @@ $countries_num = get_field('countries_num');
 $ip_groups_num = get_field('ip_groups_num');
 ?>
 
-<section class="masthead nav-height" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/casestudy-1-61_1600x1067.jpg');">
-  <div class="masthead-inner">
+<section class="masthead" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/casestudy-1-61_1600x1067.jpg');">
+  <div class="masthead-inner nav-height">
     <?php if ($heading || $subheading): ?>
     <div class="row">
       <div class="small-12 large-10 large-push-1 columns">

@@ -3,6 +3,7 @@
 get_header();
 include('includes/masthead-grants.php');
 include('includes/grant-search.php');
+include('includes/global-team-block.php');
 include('includes/foundations-block.php');
 get_footer();
 ?>
