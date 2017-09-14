@@ -67,6 +67,17 @@ function equalHeight(container) {
 
 
 $body.removeClass('preload');
+equalHeight('.grant-results-content li figcaption');
+
+
+// Execute resize fuctions
+$window.on('resize', function() {
+
+  if (viewport_width >= 768) {
+    equalHeight('.grant-results-content li figcaption');
+  }
+
+});
 
 
 $(document).ready(function() {
