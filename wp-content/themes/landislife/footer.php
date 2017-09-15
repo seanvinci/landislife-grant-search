@@ -10,10 +10,10 @@
         <li>93 4th Avenue #39<br/>New York, NY 10003</li>
         <li class="columns nopad">
           <ul class="footer-social">
-            <li><a href="javascript:;"><img alt="" src="https://static.wixstatic.com/media/01ab6619093f45388d66736ec22e5885.png/v1/fill/w_26,h_26,al_c,usm_0.66_1.00_0.01/01ab6619093f45388d66736ec22e5885.png" style="width: 26px; height: 26px; object-fit: cover;"></a></li>
-            <li><a href="javascript:;"><img alt="" src="https://static.wixstatic.com/media/81af6121f84c41a5b4391d7d37fce12a.png/v1/fill/w_26,h_26,al_c,usm_0.66_1.00_0.01/81af6121f84c41a5b4391d7d37fce12a.png" style="width: 26px; height: 26px; object-fit: cover;"></a></li>
-            <li><a href="javascript:;"><img alt="" src="https://static.wixstatic.com/media/203dcdc2ac8b48de89313f90d2a4cda1.png/v1/fill/w_26,h_26,al_c,usm_0.66_1.00_0.01/203dcdc2ac8b48de89313f90d2a4cda1.png" style="width: 26px; height: 26px; object-fit: cover;"></a></li>
-            <li><a href="javascript:;"><img alt="" src="https://static.wixstatic.com/media/23fd2a2be53141ed810f4d3dcdcd01fa.png/v1/fill/w_26,h_26,al_c,usm_0.66_1.00_0.01/23fd2a2be53141ed810f4d3dcdcd01fa.png" style="width: 26px; height: 26px; object-fit: cover;"></a></li>
+            <li><a href="javascript:;"><img alt="" src="<?php echo get_template_directory_uri(); ?>/img/twitter_icon.png" style="width: 26px; height: 26px; object-fit: cover;"></a></li>
+            <li><a href="javascript:;"><img alt="" src="<?php echo get_template_directory_uri(); ?>/img/instagram_icon.png" style="width: 26px; height: 26px; object-fit: cover;"></a></li>
+            <li><a href="javascript:;"><img alt="" src="<?php echo get_template_directory_uri(); ?>/img/youtube_icon.png" style="width: 26px; height: 26px; object-fit: cover;"></a></li>
+            <li><a href="javascript:;"><img alt="" src="<?php echo get_template_directory_uri(); ?>/img/facebook_icon.png" style="width: 26px; height: 26px; object-fit: cover;"></a></li>
           </ul>
         </li>
         <li class="footer-credits columns nopad">
@@ -34,11 +34,11 @@
             <div id="mc_embed_signup_scroll">
               <div class="mc-field-group">
                 <label for="mce-EMAIL"><span class="offscreen">Email Address</span></label>
-                <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email Address">
+                <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Your Email">
               </div>
               <div class="mc-field-group">
                 <label for="mce-FNAME"><span class="offscreen">First Name</span></label>
-                <input type="text" value="" name="FNAME" class="" id="mce-FNAME" placeholder="Last Name">
+                <input type="text" value="" name="FNAME" class="" id="mce-FNAME" placeholder="First Name">
               </div>
               <div class="mc-field-group">
                 <label for="mce-LNAME"><span class="offscreen">Last Name</span></label>
@@ -54,7 +54,7 @@
           </form>
         </div>
         <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
-        <p>We respect your privacy.</p>
+        <p>We respect your privacy</p>
       </div>
     </div>
     <div class="footer-twitter medium-4 columns tar">

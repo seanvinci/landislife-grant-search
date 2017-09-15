@@ -1306,6 +1306,52 @@ footer ul li {
 
 div#mc_embed_signup form { padding: 0; }
 
+#mc_embed_signup h2 {
+  font-family: Arial, sans-serif;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-transform: none;
+}
+
+#mc_embed_signup p {
+  font-family: Arial, sans-serif;
+  margin-bottom: 0.4rem;
+}
+
+#mc_embed_signup input#mce-EMAIL,
+#mc_embed_signup input#mce-FNAME,
+#mc_embed_signup input#mce-LNAME {
+  padding: 0.5rem;
+  font-size: 0.9rem;
+  border: 0;
+  max-width: 15rem;
+  border-radius: 3px;
+  margin-bottom: 1.7rem;
+}
+
+#mc_embed_signup input#mce-LNAME { margin-bottom: 1.3rem; }
+
+div#mc_embed_signup .mc-field-group {
+  width: auto;
+  padding-bottom: 0;
+  min-height: auto;
+}
+
+#mc_embed_signup input[type=submit] {
+  border: 0;
+  color: #fff;
+  font-family: arial, sans-serif;
+  font-size: 0.875rem;
+  letter-spacing: 0.04rem;
+  height: auto;
+  line-height: normal;
+  margin-bottom: 1.2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  background-color: #aaa;
+  min-width: 8.3rem;
+}
+
 .footer-social { margin-top: 0.45rem; }
 
 .footer-social li {
