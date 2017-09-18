@@ -42,15 +42,11 @@ function landislife_theme_js() {
 }
 add_action('wp_enqueue_scripts', 'landislife_theme_js');
 
+// Remove unused Search & Filter plugin scripts
+function remove_sf_scripts(){
+  wp_deregister_script( 'jquery-ui-datepicker' );
+}
+add_action('wp_enqueue_scripts', 'remove_sf_scripts', 100);
 
 
-
-// function SearchFilter($query) {
-//   if ($query->is_search) {
-//     $query->set('post_type', array('grants'));
-//   }
-//   return $query;
-// }
-// add_filter('pre_get_posts', 'SearchFilter');
-
-// ?>
+?>

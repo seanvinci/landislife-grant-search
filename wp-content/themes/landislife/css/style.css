@@ -654,6 +654,7 @@ h1.nav-logo img {
   }
 
   .nav-main nav {
+    background-color: transparent;
     border-top: 0;
     border-left: 0;
     float: right;
@@ -1178,7 +1179,10 @@ h1.nav-logo img {
   margin-bottom: 0.5rem;
 }
 
-.grant-results-content figcaption { height: 12.5rem; }
+.grant-results-content figcaption {
+  height: 12.5rem;
+  overflow: hidden;
+}
 
 @media only screen and (min-width: 48em) {
 
@@ -1292,7 +1296,7 @@ footer ul li {
   padding: 0;
 }
 
-.footer-contact { margin: 0 auto; }
+.footer-contact { margin-bottom: 2rem; }
 
 .footer-contact li { margin-bottom: 1rem; }
 
@@ -1300,16 +1304,20 @@ footer ul li {
 
 .footer-contact a:hover { text-decoration: none; }
 
-.footer-lead-capture { max-width: 20rem; }
+.footer-lead-capture {
+  margin-bottom: 2rem;
+  max-width: 15rem;
+}
 
 /* MailChimp Overrides */
 
 div#mc_embed_signup form { padding: 0; }
 
-#mc_embed_signup h2 {
+div#mc_embed_signup h2 {
   font-family: Arial, sans-serif;
   font-weight: 600;
   margin-bottom: 1rem;
+  margin-top: 0;
   text-transform: none;
 }
 
@@ -1324,9 +1332,9 @@ div#mc_embed_signup form { padding: 0; }
   padding: 0.5rem;
   font-size: 0.9rem;
   border: 0;
-  max-width: 15rem;
   border-radius: 3px;
   margin-bottom: 1.7rem;
+  width: 100%;
 }
 
 #mc_embed_signup input#mce-LNAME { margin-bottom: 1.3rem; }
@@ -1368,11 +1376,9 @@ div#mc_embed_signup .mc-field-group {
   color: #84858A !important;
 }
 
-@media only screen and (min-width: 48em) {
+li.footer-credits { margin-bottom: 0; }
 
-  .footer-twitter { float: right; }
-
-}
+.footer-twitter iframe { float: left; }
 
 .footer-legal {
   border-top: 1px solid #4d4e4c;
@@ -1381,7 +1387,7 @@ div#mc_embed_signup .mc-field-group {
   font-size: 0.9375rem;
   font-weight: 300;
   line-height: 1.4rem;
-  margin-top: 4.5rem;
+  margin-top: 2rem;
   padding-top: 1.5rem;
 }
 
@@ -1395,3 +1401,15 @@ div#mc_embed_signup .mc-field-group {
 }
 
 .footer-legal a:hover { text-decoration: none; }
+
+@media only screen and (min-width: 48em) {
+
+  .footer-contact { margin-bottom: 0; }
+
+  .footer-lead-capture { margin-bottom: 0; }
+
+  .footer-twitter iframe { float: right; }
+
+  .footer-legal { margin-top: 4.5rem; }
+
+}
