@@ -57,7 +57,7 @@ if ($query->have_posts()): ?>
   ?>
   <li class="medium-6 large-4 columns">
     <figure>
-      <?php if (has_post_thumbnail()) { the_post_thumbnail("large"); } ?>
+      <div class="img-block fill" style="background-image: url('<?php the_post_thumbnail_url(); ?>');"></div>
       <figcaption>
         <h4><?php echo the_title(); ?></h4>
         <?php the_content(); ?>

@@ -70,23 +70,29 @@ $body.removeClass('preload');
 
 // Execute fuctions on page load
 $window.on('load', function() {
-  equalHeight('.grant-results-content figcaption');
+  // setTimeout(function() {
+    equalHeight('.grant-results-content figcaption h4');
+    equalHeight('.grant-results-content figcaption p');
+    $window.resize();
+  // }, 200);
 });
 
 // Execute resize fuctions
 $window.on('resize', function() {
   if (viewport_width >= 768) {
-    equalHeight('.grant-results-content figcaption');
+    equalHeight('.grant-results-content figcaption h4');
+    equalHeight('.grant-results-content figcaption p');
   }
 });
 
 //detects when the ajax request has finished and the content has been updated
 // - add scripts that apply to your results here
 $(document).on("sf:ajaxfinish", ".searchandfilter", function(){
-  setTimeout(function() {
-    equalHeight('.grant-results-content figcaption');
-    console.log("ajax complete");
-  }, 100);
+  // setTimeout(function() {
+    equalHeight('.grant-results-content figcaption h4');
+    equalHeight('.grant-results-content figcaption p');
+    $window.resize();
+  // }, 200);
 });
 
 
