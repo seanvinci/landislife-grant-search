@@ -10,10 +10,10 @@
         <li>93 4th Avenue #39<br/>New York, NY 10003</li>
         <li class="columns nopad">
           <ul class="footer-social">
-            <li><a href="javascript:;"><img alt="" src="<?php echo get_template_directory_uri(); ?>/img/twitter_icon.png" style="width: 26px; height: 26px; object-fit: cover;"></a></li>
-            <li><a href="javascript:;"><img alt="" src="<?php echo get_template_directory_uri(); ?>/img/instagram_icon.png" style="width: 26px; height: 26px; object-fit: cover;"></a></li>
-            <li><a href="javascript:;"><img alt="" src="<?php echo get_template_directory_uri(); ?>/img/youtube_icon.png" style="width: 26px; height: 26px; object-fit: cover;"></a></li>
-            <li><a href="javascript:;"><img alt="" src="<?php echo get_template_directory_uri(); ?>/img/facebook_icon.png" style="width: 26px; height: 26px; object-fit: cover;"></a></li>
+            <li><a href="https://www.twitter.com/landislife"><img alt="" src="<?php echo get_template_directory_uri(); ?>/img/twitter_icon.png" style="width: 26px; height: 26px; object-fit: cover;"></a></li>
+            <li><a href="https://www.instagram.com/land__is__life/"><img alt="" src="<?php echo get_template_directory_uri(); ?>/img/instagram_icon.png" style="width: 26px; height: 26px; object-fit: cover;"></a></li>
+            <li><a href="https://www.youtube.com/channel/UCpJYHNkwum8AoNdS9e9TwwA"><img alt="" src="<?php echo get_template_directory_uri(); ?>/img/youtube_icon.png" style="width: 26px; height: 26px; object-fit: cover;"></a></li>
+            <li><a href="https://www.facebook.com/landislife92/"><img alt="" src="<?php echo get_template_directory_uri(); ?>/img/facebook_icon.png" style="width: 26px; height: 26px; object-fit: cover;"></a></li>
           </ul>
         </li>
         <li class="footer-credits columns nopad">
